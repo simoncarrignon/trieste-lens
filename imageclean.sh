@@ -15,7 +15,7 @@ do
 		id=`basename $picture`
 		#echo "    pic:"
 		echo "    $id"
-		./textcleaner -g -e stretch -f 100 -o 5 -t 30 -u -s 1 -T -p 5 $picture result/$yearb/$id #those parameter could be changed and give better result
+		./textcleaner -g -e stretch -f 100 -o 5 -t 30 -u -s 1 -T -p 5 $picture result/$yearb/$id #those parameters could be changed and may give better result
 		#echo "    done"
 	done
 done
