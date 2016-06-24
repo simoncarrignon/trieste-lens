@@ -4,9 +4,9 @@ from os import listdir
 from os.path import isfile, join
 
 path="trade/processed/"
-years = [f for f in listdir(path) if isfile(join(path, f))]
+years =listdir(path)
 print(years)
-ofile="year,place,flow,boat"
+ofile="year,place,flow,flow,boat\n"
 for year in years:
     print(year)
     filename=path+str(year)+"/"+str(year)+"_1.csv"
