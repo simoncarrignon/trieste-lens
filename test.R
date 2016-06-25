@@ -20,12 +20,16 @@ writeAllTimeSeries<-function(d){
 		write.csv(curb,paste("time/",i,"-vessel.csv",sep=""))
 	}
 }
-writeAllyears<-function(d){
-	for(i in unique(iall$country)){
-		cura=d[d$country == i & d$volume == "steamboat" ,]
-		curb=d[d$country == i & d$volume == "vessel" ,]
-		write.csv(cura,paste("time/",i,"-steam.csv",sep=""))
-		write.csv(curb,paste("time/",i,"-vessel.csv",sep=""))
+writeAllyears<-function(d,stri){
+	for(i in unique(d$year)){
+		cura=d[d$year == i & d$type == "steamboat" ,]
+		curb=d[d$year == i & d$type == "vessel" ,]
+		cura=cura[,c("year","volume","country")]
+		curb=curb[,c("year","volume","country")]
+		cura$volume=as.numeric(as.character(cura$volume))
+		curb$volume=as.numeric(as.character(curb$volume))
+		write.csv(cura,paste("years/",stri,"/",i,"-steam.csv",sep=""),row.names=F)
+		write.csv(curb,paste("years/",stri,"/",i,"-vessel.csv",sep=""),row.names=F)
 	}
 }
 
@@ -47,4 +51,7 @@ dev.off()
 png("tonnage-import.png")
 plotAllCountry(allimport,ylab="Tonnage",xlab="",main="Evolution of tonnage importation \n by country and year (log scale)")
 dev.off()
+
+writeAllyears(allexport,"export")
+writeAllyears(allimport,"import")
 
