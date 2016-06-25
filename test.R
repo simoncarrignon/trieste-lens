@@ -1,3 +1,4 @@
+#This R file allow to write some different output and do some basic simple graphs
 
 plotAllCountry<-function(d,...){
 	plot(as.numeric(as.character(d$boat)) ~ d$year,type="n",log="y",...)
