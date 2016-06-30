@@ -1,3 +1,4 @@
+#This python script process the database to create unified csv file
 import csv
 import re
 from os import listdir
