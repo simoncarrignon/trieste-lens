@@ -6,6 +6,8 @@ import geopy,geopy.distance
 from optparse import OptionParser
 
 #To use this scrip do : python splitDataSet.py -f dataset -e eventset
+#Exemple : python splitDataSet.py -f final_table_dist-export.csv -e exempleEvents.csv
+
 
 #Split a file given a event (long,lat) and a range of the even
 def split_set(mainfile,eventname,coor,dist):
