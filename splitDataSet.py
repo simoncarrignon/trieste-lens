@@ -5,6 +5,7 @@ import urllib,urllib2
 import geopy,geopy.distance 
 from optparse import OptionParser
 
+#To use this scrip do : python splitDataSet.py -f dataset -e eventset
 
 #Split a file given a event (long,lat) and a range of the even
 def split_set(mainfile,eventname,coor,dist):
@@ -19,10 +20,6 @@ def split_set(mainfile,eventname,coor,dist):
     ouf = open("splits/out-"+eventname+"-"+mainfile,'w')
     ouwrite=csv.DictWriter(ouf,fieldnames=field)
     ouwrite.writeheader()
-    #of.close
-    #of = open("out-"+eventname+"-"+mainfile,'w')
-    #of.write(row)
-    #of.close
     for row in csvfile:
         if(row["long"] != 'NA'):
             cur=(row["long"],row["lat"])
@@ -40,6 +37,7 @@ def split_set(mainfile,eventname,coor,dist):
     inf.close
 
 def main():
+
     parser = OptionParser()
     parser.add_option("-f", "--file", dest="filename",
                               help="split FILE given differents EVENTS", metavar="FILE")
@@ -47,6 +45,7 @@ def main():
                               help="use file EVENTS as list of events", metavar="EVENTS")
     
     (options, args) = parser.parse_args()
+
     #import_file=
     #export_file=
     filename=options.filename 
