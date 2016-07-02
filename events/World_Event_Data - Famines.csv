@@ -1,0 +1,30 @@
+type,Lat,Lon,start year,end year,magnitude,extent,description of event,,Ref
+famine,,,1846,1852,"1,000,000",,Ireland,"1,000,000",Cormac Ó Gráda (2009) – Famine: A Short History. Princeton University Press. The book’s website is here: http://press.princeton.edu/titles/8857.html
+famine,,,1845,1857,,,Scotland,,https://ourworldindata.org
+famine,,,1850,1873,high,,China,high,https://ourworldindata.org
+famine,,,1853,1855,N.A.,,India,N.A.,"Kumar and Raychaudhuri [Eds.] (1983) – The Cambridge economic history of India, Volume 2, Cambridge University Press, 1983"
+famine,,,1860,1861,"2,000,000",,India,"2,000,000","Kumar and Raychaudhuri [Eds.] (1983) – The Cambridge economic history of India, Volume 2, Cambridge University Press, 1983"
+famine,,,1862,1862,N.A.,,India,N.A.,"Kumar and Raychaudhuri [Eds.] (1983) – The Cambridge economic history of India, Volume 2, Cambridge University Press, 1983"
+famine,,,1866,1867,"961,043",,India,"961,043","Kumar and Raychaudhuri [Eds.] (1983) – The Cambridge economic history of India, Volume 2, Cambridge University Press, 1983"
+famine,,,1868,1868,"100,000",,Finland,"100,000",https://ourworldindata.org
+famine,,,1868,1870,"1,500,000",,India,"1,500,000",https://ourworldindata.org
+famine,,,1870,1871,"1,500,000",,Persia (now Iran),"1,500,000",https://ourworldindata.org
+famine,,,1873,1874,,,Turkey,,https://ourworldindata.org
+famine,,,1873,1874,small,,India,small,"Kumar and Raychaudhuri [Eds.] (1983) – The Cambridge economic history of India, Volume 2, Cambridge University Press, 1983"
+famine,,,1876,1879,"7,000,000",,India,"7,000,000",https://ourworldindata.org
+famine,,,1877,1874,"1,250,000",,India,"1,250,000","Kumar and Raychaudhuri [Eds.] (1983) – The Cambridge economic history of India, Volume 2, Cambridge University Press, 1983"
+famine,,,1877,1879,"9,500,000 to 13,000,000",,China,"9,500,000 to 13,000,000",
+famine,63.4,-170.166667,1878,1880,small (around a thousand),,USA (St. Lawreence Island Alaska),small (around a thousand),
+famine,,,1879,1879,low,,Ireland,low,https://ourworldindata.org
+famine,,,1880,1881,,,Ethiopia,,https://ourworldindata.org
+famine,,,1885,1899,"5.5 mio died but not descenible between famine, war or slave raids",,Sudan,"5.5 mio died but not descenible between famine, war or slave raids",White (2011) – The Great Big Book of Horrible Things. W. W. Norton & Company.
+famine,,,1888,1889,"min 150,000",,India,"min 150,000",https://ourworldindata.org
+famine,,,1888,1892,,,Ethiopia,,https://ourworldindata.org
+famine,,,1891,1892,"375,000-500,000",,Russia,"375,000-500,000",https://ourworldindata.org
+famine,,,1896,1897,"5,150,000",,India,"5,150,000","Kumar and Raychaudhuri [Eds.] (1983) – The Cambridge economic history of India, Volume 2, Cambridge University Press, 1983"
+famine,,,1896,1897,,,China,,https://ourworldindata.org
+famine,,,1899,1900,"6,100,000-19,000,000",,India,"6,100,000-19,000,000",White (2011) – The Great Big Book of Horrible Things. W. W. Norton & Company.
+famine,14.917,23.517,1900,1900,11000,,Cape Verde,11000,https://ourworldindata.org
+famine,,,1903,1906,"5,000",,Nigeria (Hausaland),"5,000",http://www.ids.ac.uk/publication/famine-in-the-twentieth-century
+famine,,,1906,1907,"37,500",,Tanzania (south),"37,500",http://www.ids.ac.uk/publication/famine-in-the-twentieth-century
+famine,,,1910,1910,"85,000",,Niger,"85,000",www.emdat.be
