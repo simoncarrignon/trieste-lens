@@ -3,6 +3,7 @@ import sys
 from bs4 import BeautifulSoup
 import urllib,urllib2
 import geopy,geopy.distance 
+from optparse import OptionParser
 
 
 #get_html return the html code of a given page with adresse: url 
@@ -13,26 +14,43 @@ def get_html(url):
     response = urllib2.urlopen(request)
     return(response)
 
-f = open("countries.csv", 'r')
-csvfile=csv.reader(f)
-output="country,lat,long,distance\n"
-while True:
-    try:
-        geolocator = geopy.Nominatim()
-        location = geolocator.geocode("Trieste")
-        break
-    except:
-        pass
+parser = OptionParser()
+parser.add_option("-f", "--file", dest="filename",
+                          help="write report to FILE", metavar="FILE")
 
-print("Trieste:"+str(location.latitude)+","+str( location.longitude)+"\n")
-trieste=(location.latitude,location.longitude)
-output=output+"trieste"+","+str(location.latitude)+","+str( location.longitude)+","+"0"+"\n"
+(options, args) = parser.parse_args()
+filename=options.filename
+rootname=filename.split('.')[0]
+
+f = open(filename, 'r')
+csvfile=csv.reader(f)
+header=csvfile.next()
+output="nautical distance,country,port,long,lat\n"
+
+#while True:
+#    try:
+#        geolocator = geopy.Nominatim()
+#        location = geolocator.geocode("Trieste")
+#        break
+#    except:
+#        pass
+#
+#print("Trieste:"+str(location.latitude)+","+str( location.longitude)+"\n")
+#trieste=(location.latitude,location.longitude)
+#output=output+"trieste"+","+str(location.latitude)+","+str( location.longitude)+","+"0"+"\n"
 
 for row in csvfile:
+    place=""
+    if(row[2]==""):
+        place=row[1]
+    else:
+        place=row[2]
+        
+    print(place)
     while True:
         try:
             geolocator = geopy.Nominatim()
-            location = geolocator.geocode(row[0])
+            location = geolocator.geocode(place)
             print("here")
             break
         except :
@@ -43,11 +61,11 @@ for row in csvfile:
             pass
     if(location is not None ):
         cur=(location.latitude,location.longitude)
-        dist=geopy.distance.vincenty(trieste,cur)
-        print("distance:"+str(dist))
-        output=output+row[0]+","+str(location.latitude)+","+str( location.longitude)+","+str(dist)+"\n"
+        #dist=geopy.distance.vincenty(trieste,cur)
+        #print("distance:"+str(dist))
+        output=output+row[0]+",\""+row[1]+"\",\""+row[2]+"\","+str(location.latitude)+","+str( location.longitude)+"\n"
 
-of = open("localisation.csv", 'w')
+of = open(""+rootname+"-loc.csv", 'w')
 of.write(output)
 of.close
 
