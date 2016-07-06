@@ -1,4 +1,12 @@
 if(require("vioplot")){library(vioplot)}
+if(require("poweRlaw")){library(poweRlaw)}
+
+estimateAlpha<-function(data){
+    mpl=displ$new(data)
+    est=estimate_xmin(mpl)
+    mpl$setXmin(est)
+    return(mpl$pars)
+}
 #This R file allow to write some different output and do some basic simple graphs
 getCountries <- function(d,coun){
 	return(d[d$country == coun,])
@@ -15,35 +23,69 @@ plotAllCountry<-function(d,...){
 
 	plot(d$volume ~ d$year,type="n",...)
 	ccol=1
-	for(i in unique(d$country)){
+	for(i in unique(d$new_loc)){
 		
 
-		curvess=d[d$country == i & d$type == "vessel"  ,]
-		cursteam=d[d$country == i & d$type == "steamboat"  ,]
+		curvess=d[d$new_loc == i & d$type == "vessel"  ,]
+		cursteam=d[d$new_loc == i & d$type == "steamboat"  ,]
 		
-		#cur=d[d$country == i & d$type == "steam"  ,]
+		#cur=d[d$new_loc == i & d$type == "steam"  ,]
 		#print(cur)
 		lines(cursteam$volume ~ cursteam$year,col=ccol)
+		text(cursteam$year[1],cursteam$volume[1],label=i,col=ccol)
 		ccol=ccol+1
 	}
+	#legend("topleft",legend=unique(d$new_loc),col=1:length(unique(d$country)))
+
+}
+
+plotAllCountry2<-function(d,...){
+
+	plot(1,1,ylim=c(1,max(d,na.rm=T)),xlim=c(1860,1910),type="n",...)
+	ccol=1
+	years=as.numeric(as.character(colnames(d)))
+	for(i in rownames(d)){
+		print(i)
+		lines(d[i,]~years,col=ccol)
+		
+		#curvess=d[d$new_loc == i & d$type == "vessel"  ,]
+		#	
+		#cursteam=d[d$new_loc == i & d$type == "steamboat"  ,]
+		#
+		##cur=d[d$new_loc == i & d$type == "steam"  ,]
+		##print(cur)
+		#lines(cursteam$volume ~ cursteam$year,col=ccol)
+		text(years[1], d[i,1] ,label=i,col=ccol)
+		ccol=ccol+1
+	}
+	#legend("topleft",legend=unique(d$new_loc),col=1:length(unique(d$country)))
 
 }
 
 addCoordinateAndDist<-function(d){
-	res=d[,c("year","boat","volume","type","country")]
-	port=rep(NA,nrow(d))
-	long=rep(NA,nrow(d))
-	lat=rep(NA,nrow(d))
-	distance=rep(NA,nrow(d))
-	res=cbind(res,port,long,lat,distance)
-	countries=read.csv("MILES_export_country-loc.csv")
-	countries=rbind(read.csv("MILES_import_country-loc.csv"))
-	for(i in unique(countries$country)){
+	#res=d[,c("year","boat","volume","type","country")]
+	#port=rep(NA,nrow(d))
+	#lon=rep(NA,nrow(d))
+	#lat=rep(NA,nrow(d))
+	#new_loc=rep(NA,nrow(d))
+	res=d#[,c("year","boat","volume","type","country","continent")]
+	nautical_miles=rep(NA,nrow(d))
+	sea_basin=rep(NA,nrow(d))
+	continent=rep(NA,nrow(d))
+	#new_loc=rep(NA,nrow(d))
+
+	#distance=rep(NA,nrow(d))
+	#res=cbind(res,new_loc,port,lon,lat,distance)
+	res=cbind(res,sea_basin,continent,nautical_miles)
+	countries=read.csv("all_countries_tano_philip_ok.csv")
+	#countries=rbind(read.csv("MILES_import_country-loc.csv"))
+	for(i in unique(countries$OLD)){
 		print(i)
-		res$long[res$country == i] =  countries$long[countries$country == i]
-		res$port[res$country == i] =  as.character(countries$port[countries$country == i])
-		res$lat[res$country == i] =  countries$lat[countries$country == i]
-		res$distance[res$country == i] =  countries$nautical.distance[countries$country == i]
+		res$nautical_miles[res$country == i] =  as.numeric(as.character(countries$nautical_miles[countries$OLD == i]))
+		res$sea_basin[res$country == i] =  as.character(countries$sea_basin[countries$OLD == i])
+		res$continent[res$country == i] =  as.character(countries$continent[countries$OLD == i])
+		#res$new_loc[res$country == i] =  as.character(countries$NEW[countries$OLD == i])
+		#res$distance[res$country == i] =  countries$nautical.distance[countries$OLD == i]
 	}
 	return(res)
 }
@@ -100,14 +142,14 @@ plotEvol <- function(data){
 #write.csv(
 #
 ##Import data
-allimport=read.csv("final_table-import.csv")
-allexport=read.csv("final_table-export.csv")
+allimport=read.csv("final_table_dist-import.csv")
+allexport=read.csv("final_table_dist-export.csv")
 allimport=na.omit(allimport)
 allexport=na.omit(allexport)
 write.csv(print(unique(c(as.character(allexport$country),as.character(allimport$country)))),"all_cities.csv",row.names=F)
 
-#allImpLong=addCoordinateAndDist(allimport)
-#allExpLong=addCoordinateAndDist(allexport)
+allImpLong=addCoordinateAndDist(allimport)
+allExpLong=addCoordinateAndDist(allexport)
 allimport=allimport[ grep("total",allimport$country,invert=T) ,]
 
 #Reorder the data by year (better visualisation)
@@ -138,9 +180,9 @@ write.csv(allExpLong,"final_table_dist-export.csv",row.names=F)
 
 	   dev.off()
 	})
-png("img/distrib_export.png",width=1600,height=800)
-plotEvol(allexport)
 dev.off()
 png("img/distrib_import.png",width=1600,height=800)
 plotEvol(allimport)
 dev.off()
+
+tapply(allImpLong$volume,allImpLong[,c("year","country")],sum)
