@@ -1,0 +1,109 @@
+NEW,OLD,Port,lat,lon,nautical_miles,sea_basin,continent
+"Aden, UK",aden uk,Aden,"12,785497","45,018655",2688,Indian Ocean,Middle East
+Egypt,egypt,Alexandria,"31,1990035","29,8943785",1191,Mediterranean,Africa
+"Algeria, France",algeria,Algiers,"36,699729","3,05762",1254,Mediterranean,Africa
+"Algeria, France",maghreb,Algiers,"36,699729","3,05762",1254,Mediterranean,Africa
+Italy,italy,Ancona,"43,6170137","13,5170982",130,Mediterranean,South Europe
+Italy,papal state,Ancona,"43,6170137","13,5170982",130,Mediterranean,South Europe
+Italy,romagna e marche,Ancona,"43,6170137","13,5170982",130,Mediterranean,South Europe
+Iran,persia,Bandar Abbas,"27,183222","56,266645",4136,Mediterranean,South Europe
+"Thailand, UK",siam uk,Bangkok,"13,756331","100,501765",7139,Pacific Ocean,Asia
+Spain,spain,Barcelona,"41,3825596","2,1771353",1313,Mediterranean,South Europe
+Germany,bemen,Bremerhaven,"53,5522264","8,5865509",3214,North Sea,North Europe
+Germany,bremen,Bremerhaven,"53,5522264","8,5865509",3214,North Sea,North Europe
+Germany,hannover,Bremerhaven,"53,5522264","8,5865509",3214,North Sea,North Europe
+"Barbados, UK",barbados uk,Bridgetown,"13,0977832","-59,6184183",4870,North Atlantic,Central America
+Argentina,argentina,Buenos Aires,"-34,6143904","-58,4460878",6937,South Atlantic,South America
+Italy,sardegna,Cagliari,"39,2169525","9,1128513",947,Mediterranean,South Europe
+"India, UK",india uk,Calcutta,"22,572646","88,363895",5985,Indian Ocean,Asia
+"India, UK",asian uk,"Calcutta, India","22,5677459","88,3476023",5985,Indian Ocean,Asia
+"South Africa, UK",south africa uk,Cape Town,"-33,924868","18,424055",6640,South Atlantic,Africa
+"South Africa, UK",african uk,Capetown,"-33,924868","18,424055",6640,South Atlantic,Africa
+"Morocco, France",morocco,Casablanca,"33,5949733","-7,6188008",1835,Mediterranean,Africa
+Peru,peru,Chimbote,"-9,063336","-78,589011",10865,Pacific Ocean,South America
+Denmark,denmanrk,Copenhagen,"55,6867243","12,5700724",3560,North Sea,North Europe
+Denmark,denmark,Copenhagen,"55,6867243","12,5700724",3560,North Sea,North Europe
+Rumenia,moldavia,Costantza,"44,159801","28,634814",1348,Black sea,East Europe
+Romania,rumenia,Costantza,"44,159801","28,634814",1348,Black sea,East Europe
+Romania,valacchia,Costantza,"44,159801","28,634814",1348,Black sea,East Europe
+"Senegal, France",west africa,Dakar,"14,764504","-17,366029",3146,North Atlantic,Africa
+"Senegal, France",western africa,Dakar,"14,764504","-17,366029",3146,North Atlantic,Africa
+"Senegal, France",western africa france,Dakar,"14,764504","-17,366029",3146,North Atlantic,Africa
+"Cyprus, UK",cyprus,Famagusta,"35,1176638","33,9402361",1317,Mediterranean,South Europe
+"Cyprus, UK",cyprus uk,Famagusta,"35,1176638","33,9402361",1317,Mediterranean,South Europe
+"Sierra Leone, UK",western africa uk,Freetown,"8,465676","-13,231722",3637,North Atlantic,Africa
+Italy,liguria and sardegna,Genoa,"44,40565","8,946256",1118,Mediterranean,South Europe
+Sweden and Norway,norway,Gï¿½teborg,"57,70887","11,97456",3453,Baltic sea,North Europe
+Sweden and Norway,sweden and norway,Gï¿½teborg,"57,70887","11,97456",3453,Baltic sea,North Europe
+"Gibraltar, UK",gibraltar uk,Gibraltar,"36,140751","-5,353585",1664,Mediterranean,South Europe
+"Gibraltar, UK",uk gibraltar,Gibraltar,"36,140751","-5,353585",1664,Mediterranean,South Europe
+Germany,germany,Hamburg,"53,5503414","10,000654",3262,North Sea,North Europe
+Germany,hamburg,Hamburg,"53,5503414","10,000654",3262,North Sea,North Europe
+"Bermuda, UK",bermuda uk,Hamilton,"32,3078","-64,7505",4569,North Atlantic,Central America
+"Cuba, Spain",cuba american spain,Havana,"23,113593","-82,366596",5677,North Atlantic,Central America
+"Cuba, Spain",american spain,"Havana, Cuba","23,1379911","-82,3658561",5677,North Atlantic,Central America
+Turkey,crete turkey,Herakleio,"35,338735","25,144213",854,Mediterranean,South Europe
+Turkey,european turkey,Istambul,"41,0096334","28,9651646",1162,Mediterranean,Middle East
+Turkey,asian turkey,Izmir,"38,4153421","27,144474",1007,Mediterranean,Middle East
+Turkey,turkey,Izmir,"38,4153421","27,144474",1007,Mediterranean,Middle East
+"Indonesia, Netherlands",asian low countries,Jakarta,"-6,208763","106,845599",6568,Indian Ocean,Asia
+"Indonesia, Netherlands",sumatra,Jakarta,"-6,208763","106,845599",6568,Indian Ocean,Asia
+"Jamaica, UK",jamaica uk,Kingston,"17,9712148","-76,7928127",5561,North Atlantic,Central America
+"Jamaica, UK",other american uk,Kingston,"17,9712148","-76,7928127",5561,North Atlantic,Central America
+"Jamaica, UK",caribbean uk,"Kingston, Jamaica","17,9712148","-76,7928127",5561,North Atlantic,Central America
+Venezuela,venezuela,La Guaira,"10,587508","-66,921363",5300,North Atlantic,South America
+"Malta, UK",malta uk,La Valletta,"35,898908","14,514553",730,Mediterranean,South Europe
+"Malta, UK",uk malta,La Valletta,"35,898908","14,514553",730,Mediterranean,South Europe
+France,atlantic france,Le Havre,"49,4938975","0,1079732",2804,North Atlantic,North Europe
+Portugal,portugal,Lisbon,"38,7077926","-9,1365069",1947,North Atlantic,South Europe
+Italy,toscana,Livorno,"43,5426309","10,3160295",1047,Mediterranean,South Europe
+UK,uk,London,"51,5073219","-0,1276473",2968,North Sea,North Europe
+"Angola, Portugal",african portugal,Luanda,"-8,839988","13,289437",5543,South Atlantic,Africa
+"Macao, China, Portugal",asian portugal,Macao,"22,198745","113,543873",2968,North Sea,North Europe
+Philippines,philippines,Manila,"14,599512","120,98422",7649,South China Sea,Oceania
+"Mozambique, Portugal",eastern africa portugal,Maputo,"-25,891968","32,605135",5632,Indian Ocean,Africa
+France,france,Marseille,"43,2961743","5,3699525",1210,Mediterranean,South Europe
+France,mediterranean france,Marseille,"43,2961743","5,3699525",1210,Mediterranean,South Europe
+Eritrea,massaua,Massawa,"15,6042235","39,4652299",2354,Indian Ocean,Africa
+Uruguay,uruguay,Montevideo,"-34,9059038","-56,1913568",6840,South Atlantic,South America
+Italy,neaples,Neaples,"40,851775","14,268124",808,Mediterranean,South Europe
+USA,usa,New York,"40,7305991","-73,9865811",4854,North Atlantic,North America
+Russia,russia black sea,Novorossiysk,"44,7239578","37,7690711",1608,Black sea,East Europe
+Belgium,belgium,Ostend,"51,21543","2,928656",2933,North Sea,North Europe
+Austria-Hungary,austria,Other Austro-Hungarian ports,"45,649526","13,776818",0,Mediterranean,Central Europe
+Austria-Hungary,austria hungary,Other Austro-Hungarian ports,"46,649526","13,776819",0,Mediterranean,Central Europe
+Austria-Hungary,austro illirian litoral,Other Austro-Hungarian ports,"46,649526","13,776819",0,Mediterranean,Central Europe
+Austria-Hungary,dalmatia,Other Austro-Hungarian ports,"45,649526","13,776818",0,Mediterranean,Central Europe
+Austria-Hungary,hungarian litoral,Other Austro-Hungarian ports,"45,649526","13,776818",0,Mediterranean,Central Europe
+Italy,sicily,Palermo,"38,11127","13,3534422",753,Mediterranean,South Europe
+Montenegro,montenegro,Port of Bar,"42,087462","19,083959",304,Mediterranean,South Europe
+"Martinique, France",caribbean france,"Port of Fort-de-France, Martinique","14,6033306","-61,06173136",4904,North Atlantic,Central America
+"Martinique, France",martinica france,"Port of Fort-de-France, Martinique","14,6033306","-61,06173136",4904,North Atlantic,Central America
+"Trinidad, UK",trinidad uk,Port of Spain,"10,654901","-61,501926",5059,North Atlantic,Central America
+Haiti,haiti,Port-au-Prince,"18,594395","-72,307433",5430,North Atlantic,Central America
+"Canary, Spain",canarias spain,Puertos de Las Palmas,"28,1216268","-15,4058906",2345,North Atlantic,Africa
+"Canary, Spain",african spain,"Puertos de Las Palmas, Canarias","28,1216268","-15,4058906",2345,North Atlantic,Africa
+"Canada, UK",american uk,"Quebec City, Canada","46,8257374","-71,2349113",4689,North Atlantic,North America
+"Canada, UK",canada uk,"Quebec City, Canada","46,8257374","-71,2349113",4689,North Atlantic,North America
+Brazil,brazil,Rio de Janeiro,"-22,9110136","-43,2093726",5838,South Atlantic,South America
+Germany,prussia,Rostok,"54,0924445","12,1286127",3669,Baltic Sea,North Europe
+Netherlands,low countries,Rotterdam,"51,92779805","4,488623269",3009,North Sea,North Europe
+"Vietnam, France",indo china france,Saigon,"10,823099","106,629664",6954,South China Sea,Oceania
+Dominican Republic,s domingo,Santo Domingo,"18,526127","-69,883565",5217,North Atlantic,Central America
+China,china,Shanghai,"31,230416","121,473701",8545,Pacific Ocean,Asia
+Russia,russia baltic sea,St Petersburg,"59,93428","30,335099",4251,Baltic sea,East Europe
+"Virgin Islands, Denmark",american denmanrk,St. Thomas,"18,33","-64,91",4955,North Atlantic,Central America
+"Virgin Islands, Denmark",american denmark,St. Thomas,"18,33","-64,91",4955,North Atlantic,Central America
+"Australia, UK",australia,Sydney,"-33,8548156","151,2164539",9590,South Pacific,Oceania
+"Australia, UK",australia uk,Sydney,"-33,8548157","151,216454",9590,South Pacific,Oceania
+"Australia, UK",austrialia,Sydney,"-33,8548156","151,2164539",9590,South Pacific,Oceania
+Greece,greece,Thessaloniki,"40,6403167","22,9352716",1056,Mediterranean,South Europe
+Japan,japan,Tokyo,"35,689488","139,691706",9212,Pacific Ocean,Asia
+Lybia,tripoli,Tripoli,"32,887209","13,191338",916,Mediterranean,Africa
+Tunisia,tunis,Tunis,"36,837495","10,192739",930,Mediterranean,Africa
+Tunisia,tunisia,Tunis,"37,837495","10,19274",930,Mediterranean,Africa
+Chile,chile,Valparaiso,"-33,0462474","-71,6198031",9437,Pacific Ocean,South America
+Bulgaria,bulgaria,Varna,"43,2166104","27,9017131",1301,Black sea,East Europe
+Italy,veneto,Venezia,"45,440847","12,315515",0,Mediterranean,South Europe
+Mexico,mexico,Veracruz,"19,333333","-96,6666669",6467,North Atlantic,Central America
+Greece,ionic islands,Zakynthos,"37,787033","20,899876",593,Mediterranean,South Europe
