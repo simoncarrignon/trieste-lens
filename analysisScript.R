@@ -1,6 +1,8 @@
 if(require("vioplot")){library(vioplot)}
 if(require("poweRlaw")){library(poweRlaw)}
 
+options("scipen"=100, "digits"=4)
+
 estimateAlpha<-function(data){
     mpl=displ$new(data)
     est=estimate_xmin(mpl)
@@ -39,6 +41,37 @@ plotAllCountry<-function(d,...){
 
 }
 
+plotAllContinent<-function(d,...){
+
+	plot(1,1,ylim=c(1,max(d,na.rm=T)),xlim=c(1855,1910),type="n",...)
+	ccol=1
+	years=as.numeric(as.character(rownames(d)))
+	rampcol=rainbow(length(colnames(d)))
+	for(i in colnames(d)){
+		lines(d[,i]~years,col=rampcol[ccol])
+		
+		#curvess=d[d$new_loc == i & d$type == "vessel"  ,]
+		#	
+		#cursteam=d[d$new_loc == i & d$type == "steamboat"  ,]
+		#
+		##cur=d[d$new_loc == i & d$type == "steam"  ,]
+		##print(cur)
+		#lines(cursteam$volume ~ cursteam$year,col=ccol)
+		#print(years[!is.na(d[,i])])
+	y=min(years[!is.na(d[,i])])
+	if(y==Inf) y=NA
+
+		ind=seq_along(years)[years==y]
+	val=d[ind,i]
+	#print(y)
+		#text(y,val  ,label=i,col=rampcol[ccol])
+		#text(y,d[years[d],i]  ,label=i,col=rampcol[ccol])
+		text(years[1], d[1,i] ,label=i,col=rampcol[ccol])
+		ccol=ccol+1
+	}
+	#legend("topleft",legend=unique(d$new_loc),col=1:length(unique(d$country)))
+
+}
 plotAllCountry2<-function(d,...){
 
 	plot(1,1,ylim=c(1,max(d,na.rm=T)),xlim=c(1860,1910),type="n",...)
@@ -123,8 +156,8 @@ plotBoth <- function(data){
 }
 
 plotEvol <- function(data){
-	   years=unique(data$year)
-	   plot(1,1, type="n",ylim=c(-10,1600000),xlim=c(1,length(years)),xaxt="n",ylab="Volume",xlab="Years")#,main=paste("Density=",(1000-i)/1000 ,sep=""))
+	   years=sort(unique(data$year))
+	   plot(1,1, type="n",ylim=c(-10,1500000),xlim=c(1,length(years)),xaxt="n",ylab="Volume",xlab="Years")#,main=paste("Density=",(1000-i)/1000 ,sep=""))
 	   axis(1,at=seq_along(years),labels=sort(years))
 	   sapply(seq_along(years),function(k){
 		  print(seq_along(years))
@@ -148,8 +181,10 @@ allimport=na.omit(allimport)
 allexport=na.omit(allexport)
 write.csv(print(unique(c(as.character(allexport$country),as.character(allimport$country)))),"all_cities.csv",row.names=F)
 
-allImpLong=addCoordinateAndDist(allimport)
-allExpLong=addCoordinateAndDist(allexport)
+#allImpLong=addCoordinateAndDist(allimport)
+#allExpLong=addCoordinateAndDist(allexport)
+allImpLong=allimport
+allExpLong=allexport
 allimport=allimport[ grep("total",allimport$country,invert=T) ,]
 
 #Reorder the data by year (better visualisation)
@@ -186,3 +221,52 @@ plotEvol(allimport)
 dev.off()
 
 tapply(allImpLong$volume,allImpLong[,c("year","country")],sum)
+
+summarize <- function(d,sorting){tapply(d$volume,d[,c("year",sorting)],sum)}
+
+plotSubset <- function(d,sorting,type,...){
+	mtype=sorting
+	if(sorting=="new_loc"){mtype="Country"}
+	if(sorting=="sea_basin"){mtype="Sea Basin"}
+	if(sorting=="continent"){mtype="Continent"}
+	plotAllContinent(summarize(d[d$continent != "Central Europe",],sorting),main=paste(type,"Volume by",mtype),xlab="year",ylab="tons",...)
+}
+
+png("ImportByContinent.png")
+plotSubset(allImpLong,"continent","Import")
+dev.off()
+png("ImportByContinent-log.png")
+plotSubset(allImpLong,"continent","Import",log="y")
+dev.off()
+png("ExportByContinent.png")
+plotSubset(allExpLong,"continent","Export")
+dev.off()
+png("ExportByContinent-log.png")
+plotSubset(allExpLong,"continent","Export",log="y")
+dev.off()
+
+png("ImportBysea_basin.png")
+plotSubset(allImpLong,"sea_basin","Import")
+dev.off()
+png("ImportBysea_basin-log.png")
+plotSubset(allImpLong,"sea_basin","Import",log="y")
+dev.off()
+png("ExportBysea_basin.png")
+plotSubset(allExpLong,"sea_basin","Export")
+dev.off()
+png("ExportBysea_basin-log.png")
+plotSubset(allExpLong,"sea_basin","Export",log="y")
+dev.off()
+
+png("ImportBynew_loc.png")
+plotSubset(allImpLong,"new_loc","Import")
+dev.off()
+png("ImportBynew_loc-log.png")
+plotSubset(allImpLong,"new_loc","Import",log="y")
+dev.off()
+png("ExportBynew_loc.png")
+plotSubset(allExpLong,"new_loc","Export")
+dev.off()
+png("ExportBynew_loc-log.png")
+plotSubset(allExpLong,"new_loc","Export",log="y")
+dev.off()
