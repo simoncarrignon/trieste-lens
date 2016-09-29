@@ -177,10 +177,33 @@ plotEvol <- function(data){
 ##Import data
 allimport=read.csv("final_table_dist-import.csv")
 allexport=read.csv("final_table_dist-export.csv")
+
 allimport=na.omit(allimport)
 allexport=na.omit(allexport)
 write.csv(print(unique(c(as.character(allexport$country),as.character(allimport$country)))),"all_cities.csv",row.names=F)
 
+convertPos <- function(){
+	allimport$lon=as.numeric(gsub(",",".",allimport$lon))
+	allexport$lon=as.numeric(gsub(",",".",allexport$lon))
+	allexport$lat=as.numeric(gsub(",",".",allexport$lat))
+	trieste=c(45.38,13.48)
+	plotAndLinkPort(allexport)
+}
+
+plotAndLinkPort<-function(dataset,...){
+    tradesize=sort(tapply( dataset$volume, dataset$country, sum ))
+    dataset=unique(dataset[,c("country","lon","lat")])
+    tradesize=cbind.data.frame("vol"=tradesize,"country"=names(tradesize))
+    dataset=merge(tradesize,dataset)
+
+    par(mar=rep(0,4))
+    plot(dataset$lon,dataset$lat,axes=F,ylab="",xlab="",pch=20,cex=log(tradesize$vol)/5,col=alpha("orange",.5),type="n",...)
+    segments(dataset$lon,dataset$lat,rep(trieste[2],ncol(dataset)),rep(trieste[1],ncol(dataset)),col=alpha("black",.2))
+    map("world",add=T)
+    points(dataset$lon,dataset$lat,pch=20,cex=log(tradesize$vol)/5,col=alpha("orange",.5))
+    points(trieste[2],trieste[1],pch=20,cex=2,col=alpha("red",.9))
+
+}
 #allImpLong=addCoordinateAndDist(allimport)
 #allExpLong=addCoordinateAndDist(allexport)
 allImpLong=allimport
@@ -205,17 +228,8 @@ allimport=allimport[ grep("total",allimport$country,invert=T) ,]
 #writeAllyears(allexport,"export")
 #writeAllyears(allimport,"import")
 #
-write.csv(allImpLong,"final_table_dist-import.csv",row.names=F)
-write.csv(allExpLong,"final_table_dist-export.csv",row.names=F)
-
-    sapply(unique(allimport$year),function(i){
-	   pdf(paste("tmp/100/agentwrtK_D-",formatC(1000-i,width=4,format="d",flag="0"),".pdf",sep=""),pointsize=22)
-	   par(mar=c(5,4,2,.5),cex.lab=1.2)
-	   t_comp=getLastIt(alld100WOUT[alld100WOUT$Sparsity ==i,])
-
-	   dev.off()
-	})
-dev.off()
+write.csv(allimport,"final_table_dist-import.csv",row.names=F)
+write.csv(allexport,"final_table_dist-export.csv",row.names=F)
 png("img/distrib_import.png",width=1600,height=800)
 plotEvol(allimport)
 dev.off()
