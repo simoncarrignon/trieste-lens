@@ -1,0 +1,49 @@
+#miles=0
+#write.csv(cbind(miles,import_country),"import_country.csv",row.names=F)
+#write.csv(cbind(miles,export_country),"export_country.csv",row.names=F)
+#export_country,
+#import_country=as.character(sort(unique(allimport$country)))
+#export_country=as.character(sort(unique(allexport$country)))
+#write.csv(
+#
+##Import data
+allimport=read.csv("final_table_dist-import.csv")
+allexport=read.csv("final_table_dist-export.csv")
+
+allimport=na.omit(allimport)
+allexport=na.omit(allexport)
+write.csv(print(unique(c(as.character(allexport$country),as.character(allimport$country)))),"all_cities.csv",row.names=F)
+
+#allImpLong=addCoordinateAndDist(allimport)
+#allExpLong=addCoordinateAndDist(allexport)
+allImpLong=allimport
+allExpLong=allexport
+allimport=allimport[ grep("total",allimport$country,invert=T) ,]
+
+#Reorder the data by year (better visualisation)
+#allexport=allexport[order(allexport$year),]
+#allimport=allimport[order(allimport$year),]
+
+
+#print the graph:
+
+#png("tonnage-export.png")
+#plotAllCountry(allexport,ylab="Tonnage",xlab="",main="Evolution of tonnage exportation \n by country and year (log scale)")
+#dev.off()
+#
+#png("tonnage-import.png")
+#plotAllCountry(allimport,ylab="Tonnage",xlab="",main="Evolution of tonnage importation \n by country and year (log scale)")
+#dev.off()
+#
+#writeAllyears(allexport,"export")
+#writeAllyears(allimport,"import")
+#
+write.csv(allimport,"final_table_dist-import.csv",row.names=F)
+write.csv(allexport,"final_table_dist-export.csv",row.names=F)
+png("img/distrib_import.png",width=1600,height=800)
+plotEvol(allimport)
+dev.off()
+
+tapply(allImpLong$volume,allImpLong[,c("year","country")],sum)
+
+
