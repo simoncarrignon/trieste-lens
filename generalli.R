@@ -7,6 +7,7 @@
 options("scipen"=100, "digits"=4)##this is very import as it allow to avoid LOT of problems comming from the fact that will reading the 
 prices=read.csv("price.csv")
 generalli=read.csv("tano_data/transport")
+generalli=read.csv("new_generalli.csv")
 points(generalli[,2] ~ generalli$YEAR,type="l")
 plot(generalli$PROFIT ~ generalli$YEAR,type="l",col="red",log="y",ylab="",xlab="")
 plot(generalli$PROFIT ~ generalli$YEAR,type="l",col="red",ylab="",xlab="")
@@ -18,12 +19,16 @@ dev.off()
 corgeneralli=generalli
 
 convertflorint<-function(){
-    corgeneralli[generalli$YEAR >= 1896 ,2:8] = generalli[generalli$YEAR >= 1896 ,2:8]/2
-    corgeneralli[generalli$CURRENCY == "lire" ,2:8] = generalli[generalli$CURRENCY == "lire" ,2:8]/2.64
+    corgeneralli[corgeneralli$YEAR > 1896 ,2:12] = generalli[generalli$YEAR > 1896 ,2:12]/2
+    corgeneralli$REVENUES_TOTAL_A.B[corgeneralli$YEAR > 1896] =corgeneralli$REVENUES_TOTAL_A.B[corgeneralli$YEAR > 1896]/2
+    corgeneralli[corgeneralli$CURRENCY == "lire" ,2:11] = generalli[generalli$CURRENCY == "lire" ,2:12]/2.64
 }
 
 pdf("transport_vs_total_premium_log_plus_numboat.pdf")
 Bigplot(allimport)
+events=read.csv("events.csv",sep="\t",header=F)
+abline(v=events$V1,lwd=20,col=alpha("black",.1))
+text(events$V1,rep(12000,nrow(events)),substr(events$V2,1,13),col=alpha("red",.6),srt=25,cex=.7)
 dev.off()
 
 
@@ -62,12 +67,15 @@ countYear=apply(allI,2, function(i){length(which(i>0))})
 
 
 ###GET STAT
-mean_per_country=tapply( allimport$volume, allimport[,c("new_loc","year")], mean)
-sd_per_country=tapply( allimport$volume, allimport[,c("new_loc","year")], sd)
+mean_per_country=tapply( allexport$volume, allexport[,c("new_loc","year")], mean)
+sd_per_country=tapply( allexport$volume, allexport[,c("new_loc","year")], sd)
 meanYearCountr=apply(mean_per_country,2,mean,na.rm=T)
 meanSdYearCountr=apply(sd_per_country,2,mean,na.rm=T)
 sdYearCountr=apply(mean_per_country,2,sd,na.rm=T)
-plot(sdYearCountr/meanYearCountr,type="l")
+lines(sdYearCountr/meanYearCountr,type="l",xlab="",col="red",ylab="")
+axis(1,label=names(sdYearCountr),at=1:length(sdYearCountr))
+axis(2)
+
 
 plot(meanSdYearCountr/meanYearCountr,type="l")
 write.csv(allimport[allimport$type == "vessel" & allimport$year < 1870 & allimport$volume/allimport$boat > 1000,],"req.csv")
@@ -83,4 +91,64 @@ y1909= allimport$volume[allimport$type==type & allimport$year == 1909]/allimport
 	plotAndLinkPort(allimport)
 
 
+    colpremium="dark orange"
+    coltransp="dark green"
+
+    par(fig=c(0,1,0.4,1))
+
+    par(mar=c(0,5,1,5))
+
+    pdf("decomposition_premiums.pdf")
+    plot(corgeneralli$REVENUES_TOTAL_A.B ~ corgeneralli$YEAR,type="l",col=colpremium,log="y",ylab="Florins",xlab="Years",main="",ylim=c(100000,1000000000),lwd=4,axes=F)
+    points(generalli$REVENUES_TOTAL_A.B[generalli$YEAR >= 1896]~ generalli$YEAR[generalli$YEAR >= 1896],type="l",col=colpremium,lwd=4,lty=3)
+    points(corgeneralli[,2] ~ corgeneralli$YEAR,type="l",col=coltransp,lwd=4)
+    points(corgeneralli$Fire.Theft.Glass_PREMIUMS.bal_A. ~ corgeneralli$YEAR,type="l",col=3,lwd=4)
+    points(corgeneralli$Life_a_PREMIUMS_death.balB. ~ corgeneralli$YEAR,type="l",col=4,lwd=4)
+    points(corgeneralli$Life_b_PREMIUMS_life.balB. ~ corgeneralli$YEAR,type="l",col=5,lwd=4)
+    points(corgeneralli$Life_a_PREMIUMS_death.balB.+corgeneralli$Life_b_PREMIUMS_life.balB. ~ corgeneralli$YEAR,type="l",col=6,lwd=4)
+    corgeneralli$Transport_PREMIUMS.bal_A./corgeneralli$REVENUES_TOTAL_A.B - corgeneralli$X._TRANSPORT_PREMIUMS_ON_REVENUES_balance_A.B/100
+    lines(corgeneralli$X._TRANSPORT_PREMIUMS_ON_REVENUES_balance_A.B ~ corgeneralli$YEAR,col=8,lwd=4)
+    at=axTicks(2)
+    labels <- sapply(at, function(i) as.expression(bquote(10^ .(log10(i)))))
+    axis(2,at=at,label=labels)
+    axis(1,cex=.7)
+    legend("topleft",c("Total Revenues","Tranporti Premium","Fire & Theft","Life","Death","Life+Death"),col=c(colpremium,coltransp,3,4,5,6),lwd=2)
+    dev.off()
+
+    par(fig=c(0,1,0.22,.38),new=T)
+    par(mar=c(0,5,1,5))
+    plot(generalli$Wage_per_day_in_grams_of_.silver_.gAg._inKS ~ generalli$YEAR,type="l",axes="F",xlab="Years",ylab="wage/day")
+    axis(2)
+
+    par(fig=c(0,1,0.0,.22),new=T)
+    par(mar=c(4,5,1,5))
+    plot(generalli$Grams_of_gold_.gAu._per_1fl ~ generalli$YEAR,type="l",axes="F",xlab="Years",ylab="Price of Gold")
+    axis(1)
+    axis(2)
+
+    par(mar=c(4,5,1,6))
+    plot(generalli$REVENUES_TOTAL_A.B ~ generalli$YEAR,type="l",col=colpremium,lwd=4,lty=3,axes=F,xlab="Years".ylab="")
+    points(corgeneralli$REVENUES_TOTAL_A.B ~ corgeneralli$YEAR,type="l",col=colpremium,lwd=4)
+    axis(2,col=colpremium ,col.axis=colpremium,col.ticks=colpremium)#label=paste(at,"%",sp=""),at=at)
+    mtext("Total Revenu in Florins",2,3,col=colpremium)
+
+    axis(1)
+
+    par(new=T)
+    plot(generalli$Grams_of_gold_.gAu._per_1fl ~ generalli$YEAR,type="l",axes="F",col="red",lwd=4,xlab="",ylab="")
+    axis(4,col="red",col.axis="red",col.ticks="red")
+    mtext("Price of Gold",4,col="red",line=2)
+
+
+    par(new=T)
+   
+    plot(generalli$Wage_per_day_in_grams_of_.silver_.gAg._inKS ~ generalli$YEAR,type="l",axes="F",xlab="",ylab="",col="blue",lwd=4)
+    axis(4,col="blue",col.axis="blue",col.ticks="blue",line=3)
+    mtext("Wage/day in florin",4,col="blue",line=5)
+
+    #text(1905,1000001,"Tranport Premium",cex=.9,col=coltransp)
+    #text(1905,70000000,"Total Premium",cex=.9,col=colpremium)
+    #text(1905,50000000,"Fire & Theft",cex=.9,col=3)
+    #text(1905,50000000,"Life",cex=.9,col=4)
+    #text(1905,50000000,"death",cex=.9,col=5)
 

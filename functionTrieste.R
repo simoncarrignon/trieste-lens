@@ -218,6 +218,29 @@ plotAndLinkPort<-function(dataset,...){
     points(dataset$lon,dataset$lat,pch=20,cex=log(tradesize$vol)/5,col=alpha("orange",.5))
     points(trieste[2],trieste[1],pch=20,cex=2,col=alpha("red",.9))
 
+plotAndLinkPortProj<-function(dataset,...){
+    portcoor=paste(dataset$lon,dataset$lat)
+    dataset=cbind(dataset,portcoor)
+    tradesize=sort(tapply( dataset$volume, dataset$portcoor, sum ))
+    tradesize=cbind.data.frame("vol"=tradesize,"portcoor"=names(tradesize))
+    dataset=unique(dataset[,c("portcoor","lon","lat")])
+    dataset=merge(tradesize,dataset)
+    trieste=c(45.38,13.48)
+    o=c(trieste,0)
+    par(mar=rep(0,4))
+    xy=mapproject(dataset$lon,dataset$lat,orientation=o)
+    plot(xy,axes=F,ylab="",xlab="",pch=20,cex=log(tradesize$vol)/5,col=alpha("orange",.5),type="n",...)
+    rect(par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[4], col=alpha("white",.4))
+    xy=map("world",add=T,interior=F,fill=T,col=c("white"),border="white",proj="orthographic", orientation=o)
+    xy <- na.omit(data.frame(do.call(cbind, xy[c("x","y")])))
+    polygon(max(xy$x)*sin(seq(0,2*pi,length.out=100)),max(xy$y)*cos(seq(0,2*pi,length.out=100)), 
+		    col="sky blue", border=alpha("black",.2), lwd=2)
+    xy=map("world",add=T,interior=F,fill=T,col=c("lemonchiffon"),border="lemonchiffon",proj="orthographic", orientation=o)
+    segments(mapproject(dataset$lon,dataset$lat,orientation=o)$x,mapproject(dataset$lon,dataset$lat,orientation=o)$y,mapproject(rep(trieste[2],ncol(dataset)),rep(trieste[1],ncol(dataset)),orientation=o)$x,mapproject(rep(trieste[2],ncol(dataset)),rep(trieste[1],ncol(dataset)),orientation=o)$y,col=alpha("orange",.2))
+    points(mapproject(dataset$lon,dataset$lat,orientation=o),pch=20,cex=log(tradesize$vol)/5,col=alpha("orange",.5))
+    points(mapproject(trieste[2],trieste[1],orientation=o),pch=20,cex=2,col=alpha("red",.9))
+
+}
 }
 #######################################################
 #######################################################
@@ -314,6 +337,24 @@ doitgif <- function(){
 	   })
 }
 
+doitgifProj <- function(){
+    xy=mapproject(allimport$lon,allimport$lat,orientation=c(trieste,0))
+    xy <- na.omit(data.frame(do.call(cbind, xy[c("x","y")])))
+    minlon=min(xy$x)
+    minlat=min(xy$y)
+    maxlon=max(xy$x)
+    maxlat=max(xy$y)
+    ylim=c(minlat,maxlat)
+    xlim=c(minlon,maxlon)
+    sapply(unique(allimport$year),function(y){
+	   png(paste("map_trieste_proj_",y,".png",sep=""),width=900,height=500)
+	   plotAndLinkPortProj(allimport[allimport$year == y,],ylim=ylim,xlim=xlim)
+	   text(.8,-.9,y,cex=2,col="black",font=5 )
+	   
+	   dev.off()
+	   })
+}
+
 #######################################################
 #######################################################
 Bigplot <- function(dataset){
@@ -324,20 +365,20 @@ Bigplot <- function(dataset){
     par(mar=c(0,5,1,5))
     colpremium="dark orange"
     coltransp="dark green"
-    plot(corgeneralli$REVENUES.TOTAL.A.B ~ corgeneralli$YEAR,type="l",col=colpremium,log="y",ylab="Florins",xlab="",main="",ylim=c(100000,1000000000),lwd=4,axes=F)
-    points(generalli$REVENUES.TOTAL.A.B[generalli$YEAR >= 1896]~ generalli$YEAR[generalli$YEAR >= 1896],type="l",col=colpremium,lwd=4,lty=3)
+    plot(corgeneralli$REVENUES_TOTAL_A.B ~ corgeneralli$YEAR,type="l",col=colpremium,log="y",ylab="Florins",xlab="",main="",ylim=c(100000,1000000000),lwd=4,axes=F)
+    points(generalli$REVENUES_TOTAL_A.B[generalli$YEAR >= 1896]~ generalli$YEAR[generalli$YEAR >= 1896],type="l",col=colpremium,lwd=4,lty=3)
     points(corgeneralli[,2] ~ corgeneralli$YEAR,type="l",col=coltransp,lwd=4)
     points(generalli[generalli$YEAR >= 1896 ,2] ~ generalli$YEAR[generalli$YEAR >= 1896],type="l",lty=3,col=coltransp,lwd=4)
     points(generalli[generalli$YEAR >= 1896 ,2] ~ generalli$YEAR[generalli$YEAR >= 1896],type="l",lty=3,col=coltransp,lwd=4)
     #text(1905,2000000,"Profit",cex=.9,col="dark green")
     text(1905,1000000,"Tranport Premium",cex=.9,col=coltransp)
-    text(1905,70000000,"Total Premium",cex=.9,col=colpremium)
+    text(1905,70000000,"Total Revenues",cex=.9,col=colpremium)
     at=axTicks(2)
     labels <- sapply(at, function(i) as.expression(bquote(10^ .(log10(i)))))
     axis(2,at=at,label=labels)
     par(new=T)
     colrat=alpha("dark green",.5)
-    plot(corgeneralli[,2] / corgeneralli$REVENUES.TOTAL.A.B*100 ~ corgeneralli$YEAR,axes=F,xlab="",ylab="",type="h",col=colrat)
+    plot(corgeneralli[,2] / corgeneralli$REVENUES_TOTAL_A.B*100 ~ corgeneralli$YEAR,axes=F,xlab="",ylab="",type="h",col=colrat)
     at=axTicks(4)
 
     axis(4,col=colrat ,col.axis=colrat,col.ticks=colrat,label=paste(at,"%",sp=""),at=at)
