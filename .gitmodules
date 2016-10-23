@@ -1,0 +1,3 @@
+[submodule "mapben"]
+	path = mapben
+	url = git@github.com:B-Zhu/CSSS16.git
