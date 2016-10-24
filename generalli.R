@@ -21,13 +21,13 @@ corgeneralli=generalli
 convertflorint<-function(){
     corgeneralli[corgeneralli$YEAR > 1896 ,2:12] = generalli[generalli$YEAR > 1896 ,2:12]/2
     corgeneralli$REVENUES_TOTAL_A.B[corgeneralli$YEAR > 1896] =corgeneralli$REVENUES_TOTAL_A.B[corgeneralli$YEAR > 1896]/2
-    corgeneralli[corgeneralli$CURRENCY == "lire" ,2:11] = generalli[generalli$CURRENCY == "lire" ,2:12]/2.64
+    corgeneralli[corgeneralli$CURRENCY == "lire" ,2:11] = generalli[generalli$CURRENCY == "lire" ,2:11]/2.64
 }
 
 pdf("transport_vs_total_premium_log_plus_numboat.pdf")
 Bigplot(allimport)
 events=read.csv("events.csv",sep="\t",header=F)
-abline(v=events$V1,lwd=20,col=alpha("black",.1))
+abline(v=events$V1,lwd=2,col=alpha("black",.1))
 text(events$V1,rep(12000,nrow(events)),substr(events$V2,1,13),col=alpha("red",.6),srt=25,cex=.7)
 dev.off()
 
@@ -152,3 +152,4 @@ y1909= allimport$volume[allimport$type==type & allimport$year == 1909]/allimport
     #text(1905,50000000,"Life",cex=.9,col=4)
     #text(1905,50000000,"death",cex=.9,col=5)
 
+   reordered=c("UK","Argentina","Brazil","USA","South Africa, UK","Algeria, France","Netherlands","Malta, UK","Belgium","Spain","Germany","Romania","Russia","Greece","France","Turkey","Italy","Egypt","Japan","India, UK","China")

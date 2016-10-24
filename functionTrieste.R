@@ -186,6 +186,28 @@ plotEvol <- function(data){
 	   print(seq_along(years))
 	   print(years)
 	   vioplot(data$volume[data$year == years[k]],at=k,add=T,col="white")})
+#######################################################
+#######################################################
+plotRat <- function(data){
+    years=sort(unique(data$year))
+    plot(1,1, type="n",ylim=c(0,5000),xlim=c(1,length(years)),xaxt="n",ylab="Volume",xlab="Years")#,main=paste("Density=",(1000-i)/1000 ,sep=""))
+    axis(1,at=seq_along(years),labels=sort(years))
+    sapply(seq_along(years),function(k){
+	   print(seq_along(years))
+	   print(years)
+	   vioplot(data$volume[data$year == years[k]]/data$boat[data$year == years[k]],drawRect=T,at=k,add=T,col="white",colMed=1,rectCol="white",...)})
+}
+#######################################################
+#######################################################
+plotEvol <- function(data){
+    years=sort(unique(data$year))
+    plot(1,1, type="n",ylim=c(-10,1500000),xlim=c(1,length(years)),xaxt="n",ylab="Volume",xlab="Years")#,main=paste("Density=",(1000-i)/1000 ,sep=""))
+    axis(1,at=seq_along(years),labels=sort(years))
+    sapply(seq_along(years),function(k){
+	   print(seq_along(years))
+	   print(years)
+	   vioplot(data$volume[data$year == years[k]],at=k,add=T,col="white")})
+}
 }
 
 
@@ -437,6 +459,7 @@ printAllNboat <- function(){
 
 #######################################################
 #######################################################
+#print in file all ratio for all loc
 printAllRatio <- function(){
     main="Volume by"
     dataset=allimport
