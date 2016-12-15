@@ -9,7 +9,10 @@ source("functionTrieste.R")
 #
 ##Import data
 allimport=read.csv("final_table_dist-import.csv")
+allimport=read.csv("201609-final_table_dist-import_CLEANED.csv")
+allexport=read.csv("201609-final_table_dist-export_CLEANED.csv")
 allexport=read.csv("final_table_dist-export.csv")
+events=read.csv("events.csv",sep="\t",header=F)
 
 allimport=na.omit(allimport)
 allexport=na.omit(allexport)
@@ -54,11 +57,16 @@ tapply(allImpLong$volume,allImpLong[,c("year","country")],sum)
     par(xpd=NA)
 par(mfrow=c(2,1))
     par(mar=c(0,5,1,1))
-plot(unique(allimport[allimport$type == "steamboat",]$year),tapply(allimport[allimport$type == "steamboat",]$volume, allimport[allimport$type == "steamboat",]$year, sum),col="blue",type="n",axes=F,xlab="",ylab="Volume of Trade",lwd=3,ylim=c(0,3900000))
+plot(unique(allimport[allimport$type == "steamboat",]$year),tapply(allimport[allimport$type == "steamboat",]$volume, allimport[allimport$type == "steamboat",]$year, sum),col="blue",type="l",axes=F,xlab="",ylab="Volume of Trade",lwd=3,ylim=c(0,3900000))
+
 lines(unique(allimport[allimport$type == "vessel",]$year),tapply(allimport[allimport$type == "vessel",]$volume, allimport[allimport$type == "vessel",]$year, sum),col="green",lwd=3)
+
 lines(unique(allexport[allexport$type == "steamboat",]$year),tapply(allexport[allexport$type == "steamboat",]$volume, allexport[allexport$type == "steamboat",]$year, sum),col="blue",lty=3,lwd=3)
+
 lines(unique(allexport[allexport$type == "vessel",]$year),tapply(allexport[allexport$type == "vessel",]$volume, allexport[allexport$type == "vessel",]$year, sum),col="green",lty=3,lwd=3)
+
 legend("topleft",legend=c("steamboat import","\t\texport","vessel import","\t  export"),col=c("blue","blue","green","green"),lty=c(1,3,1,3),lwd=3,bty='n')
+
 lines(unique(allexport$year),tapply(allexport$volume, allexport$year, sum),col="red",lty=3,lwd=3)
 lines(unique(allimport$year),tapply(allimport$volume, allimport$year, sum),col="red",lwd=3)
 
@@ -86,7 +94,6 @@ par(new=T)
 #	   lines(unique(allexport[allexport$type == "vessel",]$year),tapply(allexport[allexport$type == "vessel",]$boat,allexport[allexport$type == "vessel",]$year,sum),col="green",lwd=2,lty=3)
 #
 box()
-events=read.csv("events.csv",sep="\t",header=F)
 abline(v=events$V1,lwd=2,col=alpha("black",.1))
 #text(events$V1,rep(10,nrow(events)),substr(events$V2,1,13),col=alpha("red",.6),srt=25,cex=.7)
 #dev.off()
