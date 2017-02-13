@@ -1,0 +1,111 @@
+source("functionTrieste.R")
+#miles=0
+#write.csv(cbind(miles,import_country),"import_country.csv",row.names=F)
+#write.csv(cbind(miles,export_country),"export_country.csv",row.names=F)
+#export_country,
+#import_country=as.character(sort(unique(allimport$country)))
+#export_country=as.character(sort(unique(allexport$country)))
+#write.csv(
+#
+##Import data
+allimport=read.csv("201609-final_table_dist-import_CLEANED.csv")
+allexport=read.csv("final_table_dist-export.csv")
+
+allimport=na.omit(allimport)
+allexport=na.omit(allexport)
+write.csv(print(unique(c(as.character(allexport$country),as.character(allimport$country)))),"all_cities.csv",row.names=F)
+
+#allImpLong=addCoordinateAndDist(allimport)
+#allExpLong=addCoordinateAndDist(allexport)
+allImpLong=allimport
+allExpLong=allexport
+allimport=allimport[ grep("total",allimport$country,invert=T) ,]
+
+#Reorder the data by year (better visualisation)
+#allexport=allexport[order(allexport$year),]
+#allimport=allimport[order(allimport$year),]
+
+
+#print the graph:
+
+#png("tonnage-export.png")
+#plotAllCountry(allexport,ylab="Tonnage",xlab="",main="Evolution of tonnage exportation \n by country and year (log scale)")
+#dev.off()
+#
+#png("tonnage-import.png")
+#plotAllCountry(allimport,ylab="Tonnage",xlab="",main="Evolution of tonnage importation \n by country and year (log scale)")
+#dev.off()
+#
+#writeAllyears(allexport,"export")
+#writeAllyears(allimport,"import")
+#
+write.csv(allimport,"final_table_dist-import.csv",row.names=F)
+write.csv(allexport,"final_table_dist-export.csv",row.names=F)
+png("img/distrib_import.png",width=1600,height=800)
+plotEvol(allimport)
+dev.off()
+plot(subset(allimport, year==1869)$volume,subset(allimport, year==1870)$new <- loc)
+boxplot(allimport$volume ~ allimport$year,log="y")
+
+tapply(allImpLong$volume,allImpLong[,c("year","country")],sum)
+
+
+#bmp("test.bmp")
+    par(xpd=NA)
+par(mfrow=c(2,1))
+    par(mar=c(0,5,1,1))
+plot(unique(allimport[allimport$type == "steamboat",]$year),tapply(allimport[allimport$type == "steamboat",]$volume, allimport[allimport$type == "steamboat",]$year, sum),col="blue",type="n",axes=F,xlab="",ylab="Volume of Trade",lwd=3,ylim=c(0,3900000))
+lines(unique(allimport[allimport$type == "vessel",]$year),tapply(allimport[allimport$type == "vessel",]$volume, allimport[allimport$type == "vessel",]$year, sum),col="green",lwd=3)
+lines(unique(allexport[allexport$type == "steamboat",]$year),tapply(allexport[allexport$type == "steamboat",]$volume, allexport[allexport$type == "steamboat",]$year, sum),col="blue",lty=3,lwd=3)
+lines(unique(allexport[allexport$type == "vessel",]$year),tapply(allexport[allexport$type == "vessel",]$volume, allexport[allexport$type == "vessel",]$year, sum),col="green",lty=3,lwd=3)
+legend("topleft",legend=c("steamboat import","\t\texport","vessel import","\t  export"),col=c("blue","blue","green","green"),lty=c(1,3,1,3),lwd=3,bty='n')
+lines(unique(allexport$year),tapply(allexport$volume, allexport$year, sum),col="red",lty=3,lwd=3)
+lines(unique(allimport$year),tapply(allimport$volume, allimport$year, sum),col="red",lwd=3)
+
+legend("topleft",legend=c("steamboat import","\t\texport","vessel import","\t  export","total import","total export"),col=c("blue","blue","green","green","red","red"),lty=c(1,3),lwd=3,bty='n')
+legend("topleft",legend=c("Total Volume import","Total Volume export"),col=c("red","red"),lty=c(1,3),lwd=3,bty='n')
+axis(2)
+axis(1)
+box()
+text(events$V1,rep(-200000,nrow(events)),substr(events$V2,1,13),col=alpha("red",1),srt=25,cex=.7)
+
+    par(mar=c(4,5,1,1))
+
+plot(unique(allimport$year),tapply(allimport$port, allimport$year, length),col="dar kred",type="l",axes=F,xlab="",ylab="Nb of unique port",lwd=3,ylim=c(0,60))
+lines(unique(allimport$year),tapply(allexport$port, allexport$year, length),col="dark red",,lty=3,lwd=3)
+legend(1890,30,legend=c("import","export","revenu from \ntransport insurance"),col=c("dark red","dark red","dark orange"),lty=c(1,3,1),lwd=3,bty='n')
+axis(1)
+axis(2)
+par(new=T)
+    plot(corgeneralli[corgeneralli$YEAR %in% unique(allimport$year),2] ~ corgeneralli$YEAR[corgeneralli$YEAR %in% unique(allimport$year)] ,type="l",col="dark orange",lwd=4,axes=F,ylab="",xlab="",log="y")
+
+#par(new=T)
+#    sumtot=tapply(allimport[,"boat"],allimport$year,sum)
+#    plot(unique(allimport$year),sumtot,type="l",ylim=c(1,max(sumtot)),axes=F,cex.axis=.6,lwd=2)
+#	   lines(unique(allimport[allimport$type == "vessel",]$year),tapply(allimport[allimport$type == "vessel",]$boat,allimport[allimport$type == "vessel",]$year,sum),col="green",lwd=2)
+#	   lines(unique(allexport[allexport$type == "vessel",]$year),tapply(allexport[allexport$type == "vessel",]$boat,allexport[allexport$type == "vessel",]$year,sum),col="green",lwd=2,lty=3)
+#
+box()
+events=read.csv("events.csv",sep="\t",header=F)
+abline(v=events$V1,lwd=2,col=alpha("black",.1))
+#text(events$V1,rep(10,nrow(events)),substr(events$V2,1,13),col=alpha("red",.6),srt=25,cex=.7)
+#dev.off()
+
+plot(tapply(allimport$volume, allimport$year, sum),col="red",type="l",axes=F,xlab="",ylab="")
+plot(tapply(allimport$volume, allimport$year, sum),col="red",type="l",axes=F,xlab="",ylab="")
+
+plot(tapply(allimport$volume, allimport$year, sum)-tapply(allexport$volume, allexport$year, sum),col="red",type="l",xlab="",ylab="")
+plot(tapply(allimport$volume, allimport$year, sum)-tapply(allexport$volume, allexport$year, sum),col="red",type="l",xlab="",ylab="")
+)
+
+plot
+
+lines(median(allimport$volume[allimport$type == "steamboat" & allimport$year < 1860] / allimport$boat[ allimport$type == "steamboat"& allimport$year < 1860])*tapply(allimport$boat[ allimport$type == "steamboat"],allimport$year[ allimport$type == "steamboat"],sum)~ unique(allimport$year),col= "blue")
+plot(tapply(allimport$volume[ allimport$type == "steamboat"],allimport$year[ allimport$type == "steamboat"],sum)~ unique(allimport$year),type="l")
+
+
+subAllI=allI[reordered,]
+par(mar=c(4,7,1,1))
+image(t(as.matrix(log10(subAllI))),axes=F,col= colorRampPalette(c("blue", "green"))(n = 1000))
+axis(1,at=seq(0,1,length.out=ncol(subAllI)/3),labels=colnames(subAllI)[seq(1,ncol(subAllI),length.out=ncol(subAllI)/3)],las=2)
+axis(2,at=seq(0,1,length.out=nrow(subAllI)),labels=rownames(subAllI)[seq(1,nrow(subAllI),length.out=nrow(subAllI))],las=2)
