@@ -797,8 +797,8 @@
 1878,30,5660,"vessel","brazil","Brazil","Rio de Janeiro",-43.2093726,-22.9110136,"South Atlantic","South America",5838
 1878,2,630,"vessel","asian uk","India, UK","Calcutta, India",88.3476023,22.5677459,"Indian Ocean","Asia",5985
 1878,24,29964,"steamboat","asian uk","India, UK","Calcutta, India",88.3476023,22.5677459,"Indian Ocean","Asia",5985
-1878,3,529,vessel,tunisia,Tunisia,Tunis,1019274,37837495,Mediterranean,Africa,930
-1878,1,1115,steamboat,tunisia,Tunisia,Tunis,1019274,37837495,Mediterranean,Africa,930
+1878,3,529,vessel,tunisia,Tunisia,Tunis,10.19274,37.837495,Mediterranean,Africa,930
+1878,1,1115,steamboat,tunisia,Tunisia,Tunis,10.19274,37.837495,Mediterranean,Africa,930
 1879,2974,61555,"vessel","austro illirian litoral","Austria-Hungary","Other Austro-Hungarian ports",13.776819,46.649526,"Mediterranean","Central Europe",0
 1879,362,21561,"steamboat","austro illirian litoral","Austria-Hungary","Other Austro-Hungarian ports",13.776819,46.649526,"Mediterranean","Central Europe",0
 1879,213,9592,"vessel","hungarian litoral","Austria-Hungary","Other Austro-Hungarian ports",13.776818,45.649526,"Mediterranean","Central Europe",0
@@ -834,7 +834,7 @@
 1879,8,4942,"steamboat","sicily","Italy","Palermo",13.3534422,38.11127,"Mediterranean","South Europe",753
 1879,1,833,"steamboat","toscana","Italy","Livorno",10.3160295,43.5426309,"Mediterranean","South Europe",1047
 1879,5,1893,"steamboat","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
-1879,1,682,steamboat,sardegna,Italy,Cagliari,91128513,392169525,Mediterranean,South Europe,947
+1879,1,682,steamboat,sardegna,Italy,Cagliari,9.1128513,39.2169525,Mediterranean,South Europe,947
 1879,22,5500,"vessel","rumenia","Romania","Costantza",28.634814,44.159801,"Black sea","East Europe",1348
 1879,13,7819,"steamboat","rumenia","Romania","Costantza",28.634814,44.159801,"Black sea","East Europe",1348
 1879,29,9847,"vessel","russia black sea","Russia","Novorossiysk",37.7690711,44.7239578,"Black sea","East Europe",1608
