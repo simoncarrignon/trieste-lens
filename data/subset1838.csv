@@ -1,0 +1,29 @@
+year,boat,volume,type,country,new_loc,port,lon,lat,sea_basin,continent,nautical_miles
+1838,,,,denmark,Denmark,Copenhagen,125700724,556867243,North Sea,North Europe,3560
+1838,,,,portugal,Portugal,Lisbon,-91365069,387077926,North Atlantic,South Europe,1947
+1838,,,,papal state,Italy,Ancona,135170982,436170137,Mediterranean,South Europe,130
+1838,,,,neaples,Italy,Neaples,14268124,40851775,Mediterranean,South Europe,808
+1838,,,,sicily,Italy,Palermo,133534422,3811127,Mediterranean,South Europe,753
+1838,,,,bremen,Germany,Bremerhaven,85865509,535522264,North Sea,North Europe,3214
+1838,,,,ionic islands,Greece,Zakynthos,20899876,37787033,Mediterranean,South Europe,593
+1838,,,,greece,Greece,Thessaloniki,229352716,406403167,Mediterranean,South Europe,1056
+1838,,,,toscana,Italy,Livorno,103160295,435426309,Mediterranean,South Europe,1047
+1838,,,,sardegna,Italy,Cagliari,91128513,392169525,Mediterranean,South Europe,947
+1838,,,,mediterranean france,France,Marseille,53699525,432961743,Mediterranean,South Europe,1210
+1838,,,,atlantic france,France,Bordeaux,1079732,494938975,North Atlantic,North Europe,2804
+1838,,,,algeria,"Algeria, France",Algiers,305762,36699729,Mediterranean,Africa,1254
+1838,,,,spain,Spain,Barcelona,21771353,413825596,Mediterranean,South Europe,1313
+1838,,,,uk malta,"Malta, UK",La Valletta,14514553,35898908,Mediterranean,South Europe,730
+1838,,,,uk,UK,London,-1276473,515073219,North Sea,North Europe,2968
+1838,,,,low countries,Netherlands,Rotterdam,44886232,519277980,North Sea,North Europe,3009
+1838,,,,belgium,Belgium,Ostend,2928656,5121543,North Sea,North Europe,2933
+1838,,,,hamburg,Germany,Hamburg,10000654,535503414,North Sea,North Europe,3262
+1838,,,,prussia,Germany,Rostok,121286127,540924445,Baltic Sea,North Europe,3669
+1838,,,,sweden and norway,Sweden and Norway,Göteborg,1197456,5770887,Baltic Sea,North Europe,3453
+1838,,,,russia black sea,Russia,Novorossiysk,377690711,447239578,Black sea,East Europe,1608
+1838,,,,russia baltic sea,Russia,St Petersburg,30335099,5993428,Baltic sea,East Europe,4251
+1838,,,,turkey,Turkey,Izmir,27144474,384153421,Mediterranean,Middle East,1007
+1838,,,,egypt,Egypt,Alexandria,298943785,311990035,Mediterranean,Africa,1191
+1838,,,,s domingo,Dominican Republic,Santo Domingo,-69883565,18526127,North Atlantic,Central America,5217
+1838,,,,usa,USA,New York,-739865811,407305991,North Atlantic,North America,4854
+1838,,,,brazil,Brazil,Rio de Janeiro,-432093726,-229110136,South Atlantic,South America,5838
