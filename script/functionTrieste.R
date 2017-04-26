@@ -239,6 +239,7 @@ plotAndLinkPort<-function(dataset,...){
     segments(dataset$lon,dataset$lat,rep(trieste[2],ncol(dataset)),rep(trieste[1],ncol(dataset)),col=alpha("orange",.2))
     points(dataset$lon,dataset$lat,pch=20,cex=log(tradesize$vol)/5,col=alpha("orange",.5))
     points(trieste[2],trieste[1],pch=20,cex=2,col=alpha("red",.9))
+}
 
 plotAndLinkPortProj<-function(dataset,...){
     portcoor=paste(dataset$lon,dataset$lat)
@@ -393,7 +394,7 @@ Bigplot <- function(dataset){
     points(generalli[generalli$YEAR >= 1896 ,2] ~ generalli$YEAR[generalli$YEAR >= 1896],type="l",lty=3,col=coltransp,lwd=4)
     points(generalli[generalli$YEAR >= 1896 ,2] ~ generalli$YEAR[generalli$YEAR >= 1896],type="l",lty=3,col=coltransp,lwd=4)
     #text(1905,2000000,"Profit",cex=.9,col="dark green")
-    text(1905,1000000,"Tranport Premium",cex=.9,col=coltransp)
+    text(1905,1000000,"Transport",cex=.9,col=coltransp)
     text(1905,70000000,"Total Revenues",cex=.9,col=colpremium)
     at=axTicks(2)
     labels <- sapply(at, function(i) as.expression(bquote(10^ .(log10(i)))))
@@ -415,7 +416,7 @@ Bigplot <- function(dataset){
     par(fig=c(0,1,0,.3),new=T)
 
     par(mar=c(4,5,1,5))
-    plotBoatType(dataset,"boat",ylab="Number of boats",xlim=c(min(corgeneralli$YEAR),max(corgeneralli$YEAR)))
+    plotBoatType(dataset,"volume",ylab="Number of boats",xlim=c(min(corgeneralli$YEAR),max(corgeneralli$YEAR)))
 }
 
 

@@ -7,7 +7,7 @@
 options("scipen"=100, "digits"=4)##this is very import as it allow to avoid LOT of problems comming from the fact that will reading the 
 prices=read.csv("price.csv")
 generalli=read.csv("tano_data/transport")
-generalli=read.csv("new_generalli.csv")
+generalli=read.csv("../data/new_generalli.csv")
 points(generalli[,2] ~ generalli$YEAR,type="l")
 plot(generalli$PROFIT ~ generalli$YEAR,type="l",col="red",log="y",ylab="",xlab="")
 plot(generalli$PROFIT ~ generalli$YEAR,type="l",col="red",ylab="",xlab="")
@@ -59,8 +59,8 @@ allimport[ allimport$new_loc == "UK" & allimport$year >= 1900 & allimport$year <
 allexport[ allexport$year > 1890 & allexport$type == "vessel" & allexport$boat > 5000,]
 
 
-allimport=read.csv("final_table_dist-import.csv")
-allexport=read.csv("final_table_dist-export.csv")
+allimport=read.csv("../data/final_table_dist-import.csv")
+allexport=read.csv("../data/final_table_dist-export.csv")
 allI=tapply(allimport$volume, allimport[,c("new_loc","year")],sum)		
 allI[is.na(allI)]=0
 countYear=apply(allI,2, function(i){length(which(i>0))})
@@ -127,7 +127,7 @@ y1909= allimport$volume[allimport$type==type & allimport$year == 1909]/allimport
     axis(2)
 
     par(mar=c(4,5,1,6))
-    plot(generalli$REVENUES_TOTAL_A.B ~ generalli$YEAR,type="l",col=colpremium,lwd=4,lty=3,axes=F,xlab="Years".ylab="")
+    plot(generalli$REVENUES_TOTAL_A.B ~ generalli$YEAR,type="l",col=colpremium,lwd=4,lty=3,axes=F,xlab="Years",ylab="")
     points(corgeneralli$REVENUES_TOTAL_A.B ~ corgeneralli$YEAR,type="l",col=colpremium,lwd=4)
     axis(2,col=colpremium ,col.axis=colpremium,col.ticks=colpremium)#label=paste(at,"%",sp=""),at=at)
     mtext("Total Revenu in Florins",2,3,col=colpremium)
