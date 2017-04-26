@@ -11,7 +11,7 @@
 1859,4,424,"vessel","toscana","Italy","Livorno",10.3160295,43.5426309,"Mediterranean","South Europe",1047
 1859,20,2657,"vessel","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
 1859,49,9154,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1859,17,2814,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1859,17,2814,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1859,1,374,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1859,6,1606,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1859,5,2821,"steamboat","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
@@ -56,7 +56,7 @@
 1860,21,2190,"vessel","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
 1860,46,9050,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1860,1,500,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1860,15,2201,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1860,15,2201,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1860,6,806,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1860,1,104,"vessel","portugal","Portugal","Lisbon",-9.1365069,38.7077926,"North Atlantic","South Europe",1947
 1860,6,1079,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -96,7 +96,7 @@
 1861,11,2305,"vessel","toscana","Italy","Livorno",10.3160295,43.5426309,"Mediterranean","South Europe",1047
 1861,44,10501,"vessel","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
 1861,71,10207,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1861,7,1547,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1861,7,1547,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1861,3,905,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1861,12,1806,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1861,6,985,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -134,7 +134,7 @@
 1862,11,1479,"vessel","toscana","Italy","Livorno",10.3160295,43.5426309,"Mediterranean","South Europe",1047
 1862,35,5965,"vessel","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
 1862,109,27309,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1862,13,3014,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1862,13,3014,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1862,1,325,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1862,4,1040,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1862,1,229,"vessel","portugal","Portugal","Lisbon",-9.1365069,38.7077926,"North Atlantic","South Europe",1947
@@ -177,7 +177,7 @@
 1863,11,2282,"vessel","toscana","Italy","Livorno",10.3160295,43.5426309,"Mediterranean","South Europe",1047
 1863,20,4361,"vessel","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
 1863,75,16663,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1863,8,1336,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1863,8,1336,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1863,2,550,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1863,3,511,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1863,1,352,"vessel","portugal","Portugal","Lisbon",-9.1365069,38.7077926,"North Atlantic","South Europe",1947
@@ -219,8 +219,8 @@
 1864,15,2812,"vessel","toscana","Italy","Livorno",10.3160295,43.5426309,"Mediterranean","South Europe",1047
 1864,14,3212,"vessel","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
 1864,36,8833,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1864,3,635,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
-1864,1,895,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1864,3,635,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
+1864,1,895,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1864,6,1415,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1864,1,231,"vessel","portugal","Portugal","Lisbon",-9.1365069,38.7077926,"North Atlantic","South Europe",1947
 1864,5,731,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -266,7 +266,7 @@
 1865,15,3893,"vessel","toscana","Italy","Livorno",10.3160295,43.5426309,"Mediterranean","South Europe",1047
 1865,37,10276,"vessel","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
 1865,104,26938,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1865,5,559,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1865,5,559,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1865,4,1080,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1865,6,1680,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1865,18,6688,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -312,8 +312,8 @@
 1866,1,402,"steamboat","sardegna","Italy","Cagliari",9.1128513,39.2169525,"Mediterranean","South Europe",947
 1866,105,28026,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1866,3,1461,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1866,1,380,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
-1866,1,1242,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1866,1,380,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
+1866,1,1242,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1866,6,2076,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1866,13,3708,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1866,42,11535,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -361,7 +361,7 @@
 1868,191,14664,"vessel","greece","Greece","Thessaloniki",22.9352716,40.6403167,"Mediterranean","South Europe",1056
 1868,232,68888,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1868,54,21286,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1868,6,1697,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1868,6,1697,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1868,29,9378,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1868,16,4795,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1868,2,540,"steamboat","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
@@ -411,7 +411,7 @@
 1869,200,16193,"vessel","greece","Greece","Thessaloniki",22.9352716,40.6403167,"Mediterranean","South Europe",1056
 1869,153,45774,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1869,50,16163,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1869,5,1543,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1869,5,1543,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1869,4,1049,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1869,29,8966,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1869,9,2568,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -454,7 +454,7 @@
 1870,177,13581,"vessel","greece","Greece","Thessaloniki",22.9352716,40.6403167,"Mediterranean","South Europe",1056
 1870,63,18012,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1870,46,15981,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1870,3,706,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1870,3,706,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1870,4,927,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1870,7,1492,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1870,3,1381,"steamboat","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
@@ -502,7 +502,7 @@
 1871,1,262,"steamboat","greece","Greece","Thessaloniki",22.9352716,40.6403167,"Mediterranean","South Europe",1056
 1871,39,9488,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1871,36,15516,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1871,1,142,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1871,1,142,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1871,4,944,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1871,4,971,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1871,5,517,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -550,7 +550,7 @@
 1872,250,21528,"vessel","greece","Greece","Thessaloniki",22.9352716,40.6403167,"Mediterranean","South Europe",1056
 1872,53,13765,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1872,51,21277,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1872,8,1834,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1872,8,1834,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1872,9,2337,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1872,1,248,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1872,7,616,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -597,7 +597,7 @@
 1873,9,5294,"steamboat","greece","Greece","Thessaloniki",22.9352716,40.6403167,"Mediterranean","South Europe",1056
 1873,34,8310,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1873,35,18138,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
-1873,1,329,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1873,1,329,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1873,1,251,"vessel","algeria","Algeria, France","Algiers",3.05762,36.699729,"Mediterranean","Africa",1254
 1873,1,178,"vessel","spain","Spain","Barcelona",2.1771353,41.3825596,"Mediterranean","South Europe",1313
 1873,2,145,"vessel","uk malta","Malta, UK","La Valletta",14.514553,35.898908,"Mediterranean","South Europe",730
@@ -815,7 +815,7 @@
 1879,2,516,"vessel","india uk","India, UK","Calcutta ",88.363895,22.572646,"Indian Ocean","Asia",5985
 1879,21,29174,"steamboat","india uk","India, UK","Calcutta ",88.363895,22.572646,"Indian Ocean","Asia",5985
 1879,8,1087,"vessel","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1879,1,142,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1879,1,142,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1879,22,6537,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1879,79,58970,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1879,1,165,"vessel","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -909,7 +909,7 @@
 1881,1,1545,"steamboat","australia uk","Australia, UK","Sydney",151.216454,-33.8548157,"South Pacific","Oceania",9590
 1881,3,606,"vessel","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
 1881,7,1541,"vessel","bulgaria","Bulgaria","Varna",27.9017131,43.2166104,"Black sea","East Europe",1301
-1881,4,1109,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1881,4,1109,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1881,28,10637,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1881,77,60696,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1881,1,204,"vessel","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -962,7 +962,7 @@
 1882,5,842,"vessel","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
 1882,4,3146,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
 1882,1,175,"vessel","bulgaria","Bulgaria","Varna",27.9017131,43.2166104,"Black sea","East Europe",1301
-1882,1,885,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1882,1,885,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1882,30,9803,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1882,78,59310,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1882,33,13846,"vessel","uk","UK","London",-0.1276473,51.5073219,"North Sea","North Europe",2968
@@ -1018,7 +1018,7 @@
 1883,13,23720,"steamboat","china","China","Shanghai",121.473701,31.230416,"Pacific Ocean","Asia",8545
 1883,2,1547,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
 1883,1,235,"vessel","bulgaria","Bulgaria","Varna",27.9017131,43.2166104,"Black sea","East Europe",1301
-1883,1,371,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1883,1,371,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1883,18,7324,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1883,80,62615,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1883,22,9792,"vessel","uk","UK","London",-0.1276473,51.5073219,"North Sea","North Europe",2968
@@ -1076,8 +1076,8 @@
 1884,9,6463,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1884,1,129,"vessel","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
 1884,5,3900,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1884,1,170,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
-1884,5,4227,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1884,1,170,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
+1884,5,4227,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1884,18,6190,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1884,58,45807,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1884,1,488,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -1129,8 +1129,8 @@
 1885,30,49441,"steamboat","india uk","India, UK","Calcutta ",88.363895,22.572646,"Indian Ocean","Asia",5985
 1885,12,23059,"steamboat","china","China","Shanghai",121.473701,31.230416,"Pacific Ocean","Asia",8545
 1885,17,11799,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
-1885,1,205,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
-1885,6,4350,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1885,1,205,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
+1885,6,4350,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1885,21,7571,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1885,55,42347,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1885,17,7033,"vessel","uk","UK","London",-0.1276473,51.5073219,"North Sea","North Europe",2968
@@ -1177,8 +1177,8 @@
 1886,19,38193,"steamboat","china","China","Shanghai",121.473701,31.230416,"Pacific Ocean","Asia",8545
 1886,18,12535,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1886,1,1390,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1886,2,389,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
-1886,4,3321,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1886,2,389,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
+1886,4,3321,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1886,6,2622,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1886,71,51810,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1886,2,2219,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -1231,8 +1231,8 @@
 1887,16,32779,"steamboat","china","China","Shanghai",121.473701,31.230416,"Pacific Ocean","Asia",8545
 1887,18,9007,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1887,1,1183,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1887,1,124,"vessel","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
-1887,10,8080,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1887,1,124,"vessel","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
+1887,10,8080,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1887,7,1750,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1887,56,46881,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1887,2,556,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -1287,7 +1287,7 @@
 1888,10,22273,"steamboat","china","China","Shanghai",121.473701,31.230416,"Pacific Ocean","Asia",8545
 1888,11,7510,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1888,2,1910,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1888,3,2724,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1888,3,2724,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1888,5,1617,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1888,53,48835,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1888,8,3892,"vessel","uk","UK","London",-0.1276473,51.5073219,"North Sea","North Europe",2968
@@ -1340,7 +1340,7 @@
 1889,2,2777,"steamboat","japan","Japan","Tokyo",139.691706,35.689488,"Pacific Ocean","Asia",9212
 1889,16,11678,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1889,1,1781,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1889,4,3019,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1889,4,3019,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1889,4,754,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1889,59,54581,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1889,3,661,"vessel","uk","UK","London",-0.1276473,51.5073219,"North Sea","North Europe",2968
@@ -1390,7 +1390,7 @@
 1890,5,10308,"steamboat","china","China","Shanghai",121.473701,31.230416,"Pacific Ocean","Asia",8545
 1890,17,14826,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1890,1,266,"steamboat","bulgaria","Bulgaria","Varna",27.9017131,43.2166104,"Black sea","East Europe",1301
-1890,8,6789,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1890,8,6789,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1890,8,2570,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1890,54,57008,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1890,6,2780,"vessel","uk","UK","London",-0.1276473,51.5073219,"North Sea","North Europe",2968
@@ -1432,7 +1432,7 @@
 1891,32,62634,"steamboat","india uk","India, UK","Calcutta ",88.363895,22.572646,"Indian Ocean","Asia",5985
 1891,6,12061,"steamboat","china","China","Shanghai",121.473701,31.230416,"Pacific Ocean","Asia",8545
 1891,17,15462,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
-1891,6,4742,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1891,6,4742,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1891,7,2552,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1891,64,67284,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1891,1,1052,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -1483,7 +1483,7 @@
 1892,23,46455,"steamboat","india uk","India, UK","Calcutta ",88.363895,22.572646,"Indian Ocean","Asia",5985
 1892,10,18310,"steamboat","china","China","Shanghai",121.473701,31.230416,"Pacific Ocean","Asia",8545
 1892,19,17858,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
-1892,4,2890,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1892,4,2890,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1892,7,2166,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1892,57,52459,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1892,1,316,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -1538,7 +1538,7 @@
 1893,9,21473,"steamboat","japan","Japan","Tokyo",139.691706,35.689488,"Pacific Ocean","Asia",9212
 1893,17,16959,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1893,3,3263,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1893,5,4597,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1893,5,4597,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1893,2,335,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1893,102,87630,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1893,2,2987,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -1589,7 +1589,7 @@
 1894,12,31043,"steamboat","japan","Japan","Tokyo",139.691706,35.689488,"Pacific Ocean","Asia",9212
 1894,19,16913,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1894,4,5137,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1894,6,7376,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1894,6,7376,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1894,2,833,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1894,147,115622,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1894,5,2318,"vessel","uk","UK","London",-0.1276473,51.5073219,"North Sea","North Europe",2968
@@ -1639,7 +1639,7 @@
 1895,12,30373,"steamboat","japan","Japan","Tokyo",139.691706,35.689488,"Pacific Ocean","Asia",9212
 1895,19,18291,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1895,6,7710,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1895,5,4782,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1895,5,4782,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1895,3,944,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1895,88,71815,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1895,4,1785,"vessel","uk","UK","London",-0.1276473,51.5073219,"North Sea","North Europe",2968
@@ -1686,7 +1686,7 @@
 1896,12,29026,"steamboat","japan","Japan","Tokyo",139.691706,35.689488,"Pacific Ocean","Asia",9212
 1896,21,21424,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1896,3,4011,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1896,4,3659,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1896,4,3659,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1896,2,457,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1896,120,98774,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1896,2,1882,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -1735,7 +1735,7 @@
 1897,13,32497,"steamboat","japan","Japan","Tokyo",139.691706,35.689488,"Pacific Ocean","Asia",9212
 1897,18,18264,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1897,8,10871,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
-1897,4,3726,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1897,4,3726,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1897,6,1772,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1897,119,108398,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1897,1,165,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
@@ -1785,7 +1785,7 @@
 1898,23,24658,"steamboat","hamburg","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
 1898,3,4178,"steamboat","belgium","Belgium","Ostend",2.928656,51.21543,"North Sea","North Europe",2933
 1898,1,1033,"steamboat","bulgaria","Bulgaria","Varna",27.9017131,43.2166104,"Black sea","East Europe",1301
-1898,5,4549,"steamboat","atlantic france","France","Le Havre",0.1079732,49.4938975,"North Atlantic","North Europe",2804
+1898,5,4549,"steamboat","atlantic france","France","Bordeaux",-0.5805000,44.8404400,"North Atlantic","North Europe",2804
 1898,7,2719,"vessel","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1898,129,119995,"steamboat","mediterranean france","France","Marseille",5.3699525,43.2961743,"Mediterranean","South Europe",1210
 1898,1,155,"steamboat","germany","Germany","Hamburg",10.000654,53.5503414,"North Sea","North Europe",3262
