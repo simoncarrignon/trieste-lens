@@ -263,7 +263,7 @@ plotAndLinkPortProj<-function(dataset,...){
     points(mapproject(dataset$lon,dataset$lat,orientation=o),pch=20,cex=log(tradesize$vol)/5,col=alpha("orange",.5))
     points(mapproject(trieste[2],trieste[1],orientation=o),pch=20,cex=2,col=alpha("red",.9))
 
-}
+#}
 }
 #######################################################
 #######################################################
