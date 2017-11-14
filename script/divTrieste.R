@@ -151,14 +151,19 @@ text(rep(y,10),seq(.5,1.5,.1),labels=names(sort(vol,decreasing=T))[1:10],cex=.5)
 
 meanvol=tapply(allimport$volume , allimport[c("year", "new_loc")],mean)
 totavol=apply(meanvol,1,sum,na.rm=T)
-barplot(log(t(meanvol/totavol)))
+totavolCountry=apply(meanvol,2,sum,na.rm=T)
+barplot(log(t(meanvol/totavol))
 barplot(t(tapply(allimport$volume , allimport[c("year", "new_loc")],mean)/apply(tapply(allimport$volume , allimport[c("year", "new_loc")],mean),2,sum,na.rm=T)))
 
+image(meanvol/totavol)
 color=rainbow(length(unique(allimport$new_loc)))
 par(mfrow=c(1,2))
- barplot(t(wght),space=0,border=NA,col=color)
+wght=meanvol/totavol
+ barplot(t(wght[,order(totavolCountry)]),space=0,border=NA,col=brewer.pal(11, "Spectral"))
 numloc=length(unique(allimport$new_loc))
  plot(rep(1,numloc),1:length(unique(allimport$new_loc)),col=color,pch=20,axes=F,xlab="",ylab="",cex=2)
  text(rep(1.2,numloc),1:numloc,label=unique(as.character(allimport$new_loc)))
  image(as.matrix((wght) ) )
+
+
 
